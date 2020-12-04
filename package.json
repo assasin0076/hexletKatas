@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "lodash": "^4.17.20"
+  }
+}
