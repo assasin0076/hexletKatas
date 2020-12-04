@@ -1,6 +1,5 @@
 function getMenCountByYear(people) {
   const menCountByYear = {}
-  
   for (const person of people) {
     if (person.gender === 'male') {
       const birthYear = person.birthday.slice(0, 4) + '';
