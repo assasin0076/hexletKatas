@@ -1,18 +1,32 @@
-import _ from 'lodash';
 
-const sort = (users, num = 1) => {
-  const filtered = _.sortBy(users, ({birthday}) => Date.parse(birthday));
-  return _.slice(filtered, 0, num);
-}
 
 
 const users = [
-  { name: 'Tirion', birthday: 'Nov 19, 1988' },
-  { name: 'Sam', birthday: 'Nov 22, 1999' },
-  { name: 'Rob', birthday: 'Jan 11, 1975' },
-  { name: 'Sansa', birthday: 'Mar 20, 2001' },
-  { name: 'Tisha', birthday: 'Feb 27, 1992' },
-  { name: 'Chris', birthday: 'Dec 25, 1995' },
+  {
+    name: 'Tirion',
+    children: [
+      { name: 'Mira', birthday: '1983-03-23' },
+    ],
+  },
+  { name: 'Bronn', children: [] },
+  {
+    name: 'Sam',
+    children: [
+      { name: 'Aria', birthday: '2012-11-03' },
+      { name: 'Keit', birthday: '1933-05-14' },
+    ],
+  },
+  {
+    name: 'Rob',
+    children: [
+      { name: 'Tisha', birthday: '2012-11-03' },
+    ],
+  },
 ];
-const struc = sort(users, 3);
-console.log(struc[0]);
+
+function getChildren(arr) {
+  const children = arr.map((user) => { return user.children })
+  return children.flat(2);
+}
+
+console.log(getChildren(users));
