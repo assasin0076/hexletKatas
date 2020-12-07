@@ -1,6 +1,7 @@
 {
   "type": "module",
   "devDependencies": {
+    "fakerator": "^0.3.2",
     "lodash": "^4.17.20"
   }
 }

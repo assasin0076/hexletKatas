@@ -1,32 +1,30 @@
+import _ from "lodash";
 
 
-
-const users = [
-  {
-    name: 'Tirion',
-    children: [
-      { name: 'Mira', birthday: '1983-03-23' },
-    ],
-  },
-  { name: 'Bronn', children: [] },
-  {
-    name: 'Sam',
-    children: [
-      { name: 'Aria', birthday: '2012-11-03' },
-      { name: 'Keit', birthday: '1933-05-14' },
-    ],
-  },
-  {
-    name: 'Rob',
-    children: [
-      { name: 'Tisha', birthday: '2012-11-03' },
-    ],
-  },
+const freeEmailDomains = [
+  'gmail.com',
+  'yandex.ru',
+  'hotmail.com',
 ];
 
-function getChildren(arr) {
-  const children = arr.map((user) => { return user.children })
-  return children.flat(2);
-}
+const emails = [
+  'info@gmail.com',
+  'info@yandex.ru',
+  'info@hotmail.com',
+  'mk@host.com',
+  'support@hexlet.io',
+  'key@yandex.ru',
+  'sergey@gmail.com',
+  'vovan@gmail.com',
+  'vovan@hotmail.com',
+];
 
-console.log(getChildren(users));
+console.log(  emails.filter((mail) => freeEmailDomains.includes(mail.split('@')[1]))
+.reduce((mailsObj, curMail, index) => {
+  mailsObj[curMail.split('@')[1]] += 1;
+  return mailsObj
+}, {
+  'gmail.com': 0,
+  'yandex.ru': 0,
+  'hotmail.com': 0
+        }))
