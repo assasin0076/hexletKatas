@@ -1,3 +1,4 @@
+//Увеличивает изображение-массив в 2 раза
 const arr = [
   ['*', '*', '*', '*'],
   ['*', ' ', ' ', '*'],
@@ -5,12 +6,6 @@ const arr = [
   ['*', '*', '*', '*'],
 ];
 
-function enlargeArrayImage2(arr) { 
-  return arr.map((layer) => layer.map((symb) => symb = `${symb}${symb}`).join(''))
-  .reduce((string, layer) => {
-    return `${string}\n${layer}`
-  }, '');
-}
 
 function enlargeArrayImage(pic) {
   return pic.reduce((acc, layer) => {
