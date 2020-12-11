@@ -22,5 +22,6 @@ function rgbToHex(r, g, b) {
   return `#${parseTo16(r)}${parseTo16(g)}${parseTo16(b)}`;
 }
 
-console.log(rgbToHex(0, 0, 0));
-console.log(hexToRgb('#00840c'));
+export {hexToRgb};
+export {rgbToHex};
+
