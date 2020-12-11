@@ -1,9 +1,4 @@
-import _ from 'lodash';
-
-const sort = (users, num = 1) => {
-  const filtered = _.sortBy(users, ({birthday}) => Date.parse(birthday));
-  return _.slice(filtered, 0, num);
-}
+import {sort} from '../katas/SortArr.js';
 
 
 const users = [
@@ -15,4 +10,8 @@ const users = [
   { name: 'Chris', birthday: 'Dec 25, 1995' },
 ];
 
-export {sort};
+test('sortArr', () => {
+  const sorted = sort(users, 3);
+  expect(sorted).toHaveLength(3);
+  expect(sorted[0].name).toEqual('Rob');
+})

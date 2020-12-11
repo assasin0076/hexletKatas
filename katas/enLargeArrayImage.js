@@ -23,5 +23,4 @@ function enlargeArrayImage(pic) {
   }, '')
 }
 
-
-console.log(enlargeArrayImage(arr));
+export default enlargeArrayImage;

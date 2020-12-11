@@ -4,4 +4,4 @@ function filterAnagrams(keyWord, arr) {
   return arr.filter((word) => normalize(word) === normalWord);
 }
 
-console.log(filterAnagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']))
+export default filterAnagrams;

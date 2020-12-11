@@ -26,4 +26,4 @@ function getChildren(arr) {
   return children.flat(2);
 }
 
-console.log(getChildren(users));
+export default getChildren;

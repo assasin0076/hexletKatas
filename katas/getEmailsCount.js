@@ -66,9 +66,10 @@ function getEmailsCount(emails) {
   .filter((mail) => freeEmailDomains.includes(mail))
   .reduce((acc, domain) => {
     const count = _.get(acc, domain, 0) + 1;
-    console.log(_.get(acc, domain, 0));
     return { ...acc, [domain]: count };
   }, {})
 }
 
+
+export default getEmailsCount;
 // ^ Разобрался, и сделал по решению учителя свое. ^

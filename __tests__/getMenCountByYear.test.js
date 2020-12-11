@@ -1,18 +1,5 @@
-function getMenCountByYear(people) {
-  const menCountByYear = {}
-  for (const person of people) {
-    if (person.gender === 'male') {
-      const birthYear = person.birthday.slice(0, 4) + '';
-      if (!menCountByYear.hasOwnProperty(birthYear)) {
-
-        menCountByYear[birthYear] = 1;
-      } else {
-        menCountByYear[birthYear] += 1;
-      }
-    }
-  }
-  return menCountByYear;
-}
+import { TestScheduler } from 'jest';
+import getMCount from '../katas/getMenCountByYear.js';
 
 const users = [
   { name: 'Bronn', gender: 'male', birthday: '1973-03-23' },
@@ -27,4 +14,6 @@ const users = [
   { name: 'Edd', gender: 'male', birthday: '1973-11-03' },
 ];
 
-export default getMenCountByYear;
+test('getMenCountByYear', () => {
+  expect(getMCount(users)).toEqual({1963: 1, 1973: 3, 1980: 2, 1999: 1, 2012: 1});
+})

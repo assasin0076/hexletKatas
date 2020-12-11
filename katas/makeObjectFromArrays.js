@@ -35,7 +35,7 @@ function get(pObj, strKey, defVal = null) {
   return pObj[shortNumKey];
 }
 
-
+export {make, set, get};
 
 
 

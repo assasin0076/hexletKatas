@@ -13,4 +13,4 @@ function nrzsi(nrzsiKey) {
   return numberKey;
 }
 
-console.log(nrzsi('¯|___|¯¯¯¯¯|___|¯|_|¯'));
+export {nrzsi};

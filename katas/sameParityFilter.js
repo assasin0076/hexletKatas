@@ -5,4 +5,4 @@ function sameParity(arr) {
   return arr.filter((num) => isEven(num) === parityOfFirstEl);
 }
 
-console.log(sameParity([2, 0, 1, -3, 10, -2]));
+export {sameParity};

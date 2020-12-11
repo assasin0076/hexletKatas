@@ -1,5 +1,8 @@
 // converts dna to rna
 function dnaToRna(dna) {
+  if(typeof dna !== 'string') {
+    return null;
+  }
   const lowerDna = dna.toLowerCase();
   let result = '';
   const dnas = ['g', 'c', 't', 'a'];
@@ -12,8 +15,7 @@ function dnaToRna(dna) {
     const replace = rnas[arrPosition];
     result = `${result}${replace}`;
   }
-  if (result === 'undefined') {
-    return null;
-  }
   return result.toUpperCase();
 }
+
+export default dnaToRna;

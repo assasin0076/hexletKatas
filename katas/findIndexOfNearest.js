@@ -11,6 +11,4 @@ function findIndexOfNearest(arr, num) {
   }, 0)
 }
 
-console.log(findIndexOfNearest([], 0))
-console.log(findIndexOfNearest([7, 5, 3, 2], 4))
-console.log(findIndexOfNearest([7, 5, 4, 4, 3], 4))
+export default findIndexOfNearest;
