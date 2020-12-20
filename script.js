@@ -1,7 +1,12 @@
-import _ from 'lodash';
+const obj1 = {
+  name: 'soska',
+  family: 'hahahnt'
+}
+const obj2 = {
+  name: 'dog',
+  family: 'doggy',
+  number: '1'
+}
+const obj3 = {...obj2, ...obj1};
 
-let obj = {name:{a: 1}, dog: 'Doggy'}
-_.set(obj.name, 'a', 2)
-const obj2 = {}
-
-console.log(_.set(obj2, 'a', 'a'));
+console.log({...obj1, ...obj2, ...obj3, huy: true})
